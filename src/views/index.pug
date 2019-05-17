@@ -1,0 +1,62 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    script(src="./vendor/webcomponents-bundle.js")
+    link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+  
+    title= self.htmlWebpackPlugin.options.data.meta.title
+  body
+    include includes/header.pug
+    .content-wrapper
+      .rosa-grid
+        h1!= self.htmlWebpackPlugin.options.data.content.page.title
+        .col-4
+          p.paragraph-medium!= self.htmlWebpackPlugin.options.data.content.page.lead
+        .offers 
+          h3.title!= self.htmlWebpackPlugin.options.data.content.offers.title
+          .rosa-container
+            .rosa-row.col-5.col-ph-6.col-tab-6.col-display-6
+                .offer-card.col-2.col-ph-3.col-tab-3.col-display-3
+                    .icon-container
+                      .icon-container
+                        include icons/__icon-piggybank.pug
+                    .header-03= self.htmlWebpackPlugin.options.data.content.offers.offer_01.title
+                    p= self.htmlWebpackPlugin.options.data.content.offers.offer_01.lead
+                    a.link(href= self.htmlWebpackPlugin.options.data.content.offers.offer_01.url, target="_blank")
+                      span Подробнее
+                      .link-arrow
+                        include icons/__icon-arrow.pug
+                .offer-card.col-2.col-ph-3.col-tab-3.col-display-3
+                    .icon-container
+                      .icon-container   
+                        include icons/__icon-medkit.pug
+                    .header-03= self.htmlWebpackPlugin.options.data.content.offers.offer_02.title
+                    p= self.htmlWebpackPlugin.options.data.content.offers.offer_02.lead
+                    a.link(href= self.htmlWebpackPlugin.options.data.content.offers.offer_02.url, target="_blank")
+                      span Подробнее
+                      .link-arrow
+                        include icons/__icon-arrow.pug
+                .offer-card.col-2.col-ph-3.col-tab-3.col-display-3
+                    .icon-container
+                      .icon-container
+                        include icons/__icon-invest.pug
+                    .header-03= self.htmlWebpackPlugin.options.data.content.offers.offer_03.title
+                    p= self.htmlWebpackPlugin.options.data.content.offers.offer_03.lead
+                    a.link(href= self.htmlWebpackPlugin.options.data.content.offers.offer_03.url, target="_blank")
+                      span Подробнее
+                      .link-arrow
+                        include icons/__icon-arrow.pug
+                .offer-card.col-2.col-ph-3.col-tab-3.col-display-3
+                    .icon-container
+                      .icon-container
+                        include icons/__icon-yacht.pug
+                    .header-03= self.htmlWebpackPlugin.options.data.content.offers.offer_04.title
+                    p= self.htmlWebpackPlugin.options.data.content.offers.offer_04.lead
+                    a.link(href= self.htmlWebpackPlugin.options.data.content.offers.offer_04.url, target="_blank")
+                      span Подробнее
+                      .link-arrow
+                        include icons/__icon-arrow.pug
+    include includes/footer.pug

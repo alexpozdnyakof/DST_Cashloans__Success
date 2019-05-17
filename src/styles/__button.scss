@@ -1,0 +1,34 @@
+@import "./_mixins.scss";
+.rosa-button_phone {
+    @include button-reset();
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 36px;
+    background-color: #e60028;
+    color: #FFF !important;
+    border-radius: 18px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 8px 16px;
+    transition: background .2s cubic-bezier(.25, .46, .45, .94);
+    z-index: 1;
+    &:hover {
+        background-color: #cf0024;
+        text-decoration: none;
+    }
+    span {
+        font-family: "Rosbank-Muller";
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #282423;
+        top: 0;
+        line-height: 13px;
+        color: #fff !important;
+    }
+}

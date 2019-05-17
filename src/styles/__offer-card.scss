@@ -1,0 +1,58 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+.offer-card {
+    @include desktop {
+        margin-bottom: calc(#{$padding-width} * 3);
+        margin-right: calc(#{$padding-width} + #{$col-width}/2);
+        //width: 320px;
+    }
+    @include phablet {
+        margin-bottom: calc(#{$padding-width} * 3);
+        margin-right: calc(#{$padding-width} + #{$col-width}/2);
+    }
+    @include tablet {
+        margin-bottom: calc(#{$padding-width} * 3);
+    }
+    @include display {
+        margin-bottom: calc(#{$padding-width} * 3);
+        margin-right: calc(#{$padding-width});
+    }
+    @include mobile {
+        margin-bottom: 60px;
+    }
+    margin-bottom: 120px;
+    .header-03 {
+        margin-bottom: 16px;
+    }
+    p {
+        max-width: 60%;
+        margin-bottom: 30px;
+        height: 42px;
+        min-height: 42px;
+        display: block;
+        @include mobile {
+            height: auto;
+            min-height: auto;
+        }
+    }
+}
+
+.offer-card:nth-last-child(-n+2) {
+    margin-bottom: 0;
+    @include mobile {
+        margin-bottom: 60px;
+    }
+}
+
+.offer-card:nth-last-child() {
+    @include mobile {
+        margin-bottom: 0 !important;
+    }
+}
+
+.icon-container {
+    width: 81px;
+    height: 72px;
+    margin: 8px 0 22px 0;
+    display: inline-block;
+}
